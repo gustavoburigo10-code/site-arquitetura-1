@@ -1,0 +1,206 @@
+@import 'tailwindcss';
+
+@theme {
+  /* Paleta — PRD Marcello Moreira */
+  --color-graphite: #201f1d;
+  --color-brown: #493b30;
+  --color-sand: #a38a70;
+  --color-beige: #d6c9b8;
+  --color-cream: #f4f1eb;
+
+  --font-display: 'Cormorant Garamond', ui-serif, Georgia, serif;
+  --font-sans: 'Inter', ui-sans-serif, system-ui, sans-serif;
+
+  --ease-elegant: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+@layer base {
+  html {
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: var(--color-cream);
+    color: var(--color-graphite);
+    font-family: var(--font-sans);
+    font-weight: 300;
+    font-size: 15px;
+    line-height: 1.7;
+    overflow-x: hidden;
+  }
+
+  ::selection {
+    background: var(--color-graphite);
+    color: var(--color-cream);
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-family: var(--font-display);
+    font-weight: 300;
+    line-height: 1.05;
+  }
+
+  img {
+    -webkit-user-drag: none;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.001ms !important;
+      transition-duration: 0.001ms !important;
+    }
+  }
+}
+
+@keyframes line-sweep {
+  0% {
+    transform: scaleX(1);
+    transform-origin: right;
+  }
+  50% {
+    transform: scaleX(0);
+    transform-origin: right;
+  }
+  51% {
+    transform: scaleX(0);
+    transform-origin: left;
+  }
+  100% {
+    transform: scaleX(1);
+    transform-origin: left;
+  }
+}
+
+@layer components {
+  /* Micro-label editorial (categorias, seções, meta) */
+  .label {
+    font-family: var(--font-sans);
+    font-size: 10px;
+    font-weight: 400;
+    letter-spacing: 0.28em;
+    text-transform: uppercase;
+  }
+
+  .label-lg {
+    font-size: 11px;
+    letter-spacing: 0.32em;
+    text-transform: uppercase;
+  }
+
+  /* Link editorial com sublinhado que cresce */
+  .link-line {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding-bottom: 6px;
+  }
+
+  .link-line::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 1px;
+    width: 100%;
+    background: currentColor;
+    transform-origin: right;
+    transform: scaleX(1);
+    transition: transform 0.55s var(--ease-elegant);
+  }
+
+  .link-line:hover::after {
+    transform-origin: left;
+    animation: line-sweep 0.55s var(--ease-elegant);
+  }
+
+  /* Botão sólido — cantos retos, sem arredondamentos */
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    padding: 16px 34px;
+    font-size: 10px;
+    letter-spacing: 0.28em;
+    text-transform: uppercase;
+    border: 1px solid currentColor;
+    background: transparent;
+    cursor: pointer;
+    transition:
+      background-color 0.5s var(--ease-elegant),
+      color 0.5s var(--ease-elegant),
+      border-color 0.5s var(--ease-elegant);
+  }
+
+  .btn-solid {
+    background: var(--color-graphite);
+    border-color: var(--color-graphite);
+    color: var(--color-cream);
+  }
+
+  .btn-solid:hover {
+    background: var(--color-brown);
+    border-color: var(--color-brown);
+  }
+
+  .btn-ghost:hover {
+    background: var(--color-graphite);
+    color: var(--color-cream);
+  }
+
+  .btn-light {
+    border-color: color-mix(in srgb, var(--color-cream) 55%, transparent);
+    color: var(--color-cream);
+  }
+
+  .btn-light:hover {
+    background: var(--color-cream);
+    color: var(--color-graphite);
+    border-color: var(--color-cream);
+  }
+
+  /* Campos de formulário — linhas, sem caixas arredondadas */
+  .field {
+    width: 100%;
+    background: transparent;
+    border: 0;
+    border-bottom: 1px solid color-mix(in srgb, var(--color-cream) 28%, transparent);
+    padding: 14px 0;
+    color: var(--color-cream);
+    font-size: 15px;
+    font-weight: 300;
+    outline: none;
+    transition: border-color 0.4s var(--ease-elegant);
+  }
+
+  .field::placeholder {
+    color: color-mix(in srgb, var(--color-cream) 45%, transparent);
+  }
+
+  .field:focus {
+    border-color: var(--color-cream);
+  }
+
+  .field-error {
+    border-color: #c98d7b;
+  }
+
+  .hairline {
+    border-top: 1px solid color-mix(in srgb, var(--color-graphite) 14%, transparent);
+  }
+
+  .hairline-light {
+    border-top: 1px solid color-mix(in srgb, var(--color-cream) 16%, transparent);
+  }
+}
