@@ -51,7 +51,7 @@ export default function SectionHeading({
       {label && (
         <div
           className={`label mb-6 flex items-center gap-4 ${
-            tone === 'light' ? 'text-beige' : 'text-sand'
+            tone === 'light' ? 'text-beige' : 'text-sand-ink'
           }`}
         >
           <span className="inline-block h-px w-10 bg-current opacity-60" />

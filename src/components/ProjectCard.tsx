@@ -24,12 +24,12 @@ export default function ProjectCard({ project, ratio = 'aspect-[4/5]' }: Project
         <h3 className="font-display text-[1.55rem] leading-none transition-colors duration-500 group-hover:text-brown">
           {project.title}
           {project.provisionalTitle && (
-            <sup className="ml-1 align-super text-[0.45em] text-sand" title="Título provisório">
+            <sup className="ml-1 align-super text-[0.45em] text-sand-ink" title="Título provisório">
               †
             </sup>
           )}
         </h3>
-        <span className="label whitespace-nowrap text-sand">{categoryLabel(project.category)}</span>
+        <span className="label whitespace-nowrap text-sand-ink">{categoryLabel(project.category)}</span>
       </div>
       <p className="label mt-2 text-brown/55">
         {project.location ?? 'Localização a confirmar'}

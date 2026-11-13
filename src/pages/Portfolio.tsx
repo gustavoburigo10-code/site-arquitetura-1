@@ -33,7 +33,7 @@ export default function Portfolio() {
             Projetos residenciais, comerciais, corporativos, de interiores e especiais.
             Cada trabalho abre em uma página individual com galeria, ambientes e detalhes.
           </p>
-          <p className="label mt-8 text-sand/85">† títulos provisórios — a confirmar com o escritório</p>
+          <p className="label mt-8 text-sand-ink">† títulos provisórios — a confirmar com o escritório</p>
         </div>
       </header>
 
@@ -47,7 +47,7 @@ export default function Portfolio() {
                 type="button"
                 onClick={() => setFilter(f.value)}
                 className={`label relative pb-2 transition-colors duration-500 ${
-                  active ? 'text-graphite' : 'text-sand hover:text-graphite'
+                  active ? 'text-graphite' : 'text-sand-ink hover:text-graphite'
                 }`}
               >
                 {f.label}
@@ -99,7 +99,7 @@ export default function Portfolio() {
           </p>
         )}
 
-        <p className="mt-20 border-t border-graphite/15 pt-6 text-xs italic leading-relaxed text-sand">
+        <p className="mt-20 border-t border-graphite/15 pt-6 text-xs italic leading-relaxed text-sand-ink">
           {provisionalNotice}
         </p>
       </section>

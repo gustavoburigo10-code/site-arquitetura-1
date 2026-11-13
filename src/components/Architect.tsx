@@ -24,11 +24,11 @@ export default function Architect() {
           <SectionHeading label={architect.label} title={architect.title} size="lg" />
 
           <Reveal delay={0.1}>
-            <p className="label mt-6 text-sand">{architect.role}</p>
+            <p className="label mt-6 text-sand-ink">{architect.role}</p>
             <p className="mt-6 max-w-xl text-[15px] leading-[1.95] text-brown/90">
               {architect.paragraph}
             </p>
-            <p className="mt-8 max-w-lg border-l border-sand/50 pl-4 text-xs italic leading-relaxed text-sand">
+            <p className="mt-8 max-w-lg border-l border-sand/50 pl-4 text-xs italic leading-relaxed text-sand-ink">
               {architect.note}
             </p>
           </Reveal>

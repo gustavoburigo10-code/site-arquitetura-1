@@ -62,7 +62,7 @@ export default function Contact() {
                     <span className="text-sm text-beige/90">
                       {channel.value}
                       {channel.provisional && (
-                        <span className="ml-2 text-[10px] uppercase tracking-[0.2em] text-sand/80">
+                        <span className="ml-2 text-[10px] uppercase tracking-[0.2em] text-sand">
                           provisório
                         </span>
                       )}
@@ -171,7 +171,7 @@ export default function Contact() {
                     <button type="submit" className="btn btn-light">
                       Enviar mensagem <span aria-hidden="true">→</span>
                     </button>
-                    <p className="text-xs leading-relaxed text-sand/80">
+                    <p className="text-xs leading-relaxed text-sand">
                       Formulário demonstrativo — serviço de e-mail ainda não conectado.
                     </p>
                   </div>

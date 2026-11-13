@@ -73,7 +73,8 @@ Ao substituir uma foto: troque a URL em `PHOTOS`/`content.ts` por uma imagem
 real do escritório (ideal: WebP/AVIF, ~1600–2400px de largura, `loading="lazy"`
 já tratado pelos componentes).
 
-### Arquivos sobras do template (podem ser excluídos)
+### Limpeza
 
-`src/App.css`, `src/assets/react.svg`, `src/assets/vite.svg`, `src/assets/hero.ts`,
-`public/icons.svg` — não são utilizados pelo site.
+Os arquivos sobras do template (`src/App.css`, `src/assets/react.svg`,
+`src/assets/vite.svg`, `src/assets/hero.ts`, `public/icons.svg`) foram removidos —
+não eram utilizados pelo site.

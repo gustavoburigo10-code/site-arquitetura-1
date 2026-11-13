@@ -58,14 +58,14 @@ export default function FeaturedProjects() {
               </div>
 
               <Reveal className={row.textCls} delay={0.12}>
-                <p className="label mb-4 text-sand">
+                <p className="label mb-4 text-sand-ink">
                   {String(i + 1).padStart(2, '0')} — {categoryLabel(project.category)}
                 </p>
                 <h3 className="font-display text-[clamp(1.9rem,3.2vw,3rem)] leading-none">
                   <Link to={`/projeto/${project.slug}`} className="transition-colors duration-500 hover:text-brown">
                     {project.title}
                     {project.provisionalTitle && (
-                      <sup className="ml-1 align-super text-[0.4em] text-sand">†</sup>
+                      <sup className="ml-1 align-super text-[0.4em] text-sand-ink">†</sup>
                     )}
                   </Link>
                 </h3>

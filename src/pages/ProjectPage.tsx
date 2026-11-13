@@ -43,7 +43,7 @@ export default function ProjectPage() {
             <h1 className="mt-6 font-display text-[clamp(2.6rem,8vw,6.5rem)] uppercase leading-[0.9] tracking-[0.01em] text-cream">
               {project.title}
               {project.provisionalTitle && (
-                <sup className="ml-2 align-super text-[0.32em] text-sand">†</sup>
+                <sup className="ml-2 align-super text-[0.32em] text-sand-ink">†</sup>
               )}
             </h1>
           </div>
@@ -54,22 +54,22 @@ export default function ProjectPage() {
         <div className="grid grid-cols-1 gap-10 border-b border-graphite/15 pb-14 lg:grid-cols-12 lg:gap-16">
           <div className="grid grid-cols-2 gap-8 sm:grid-cols-3 lg:col-span-5">
             <div>
-              <p className="label text-sand">Categoria</p>
+              <p className="label text-sand-ink">Categoria</p>
               <p className="mt-3 text-sm text-graphite">{categoryLabel(project.category)}</p>
             </div>
             <div>
-              <p className="label text-sand">Localização</p>
+              <p className="label text-sand-ink">Localização</p>
               <p className="mt-3 text-sm text-graphite">{project.location ?? 'A confirmar'}</p>
             </div>
             <div>
-              <p className="label text-sand">Status</p>
+              <p className="label text-sand-ink">Status</p>
               <p className="mt-3 text-sm text-graphite">Dados a confirmar</p>
             </div>
           </div>
 
           <Reveal className="lg:col-span-6 lg:col-start-7">
             <p className="text-[15px] leading-[1.95] text-brown/90">{project.summary}</p>
-            <p className="mt-5 text-xs italic text-sand">
+            <p className="mt-5 text-xs italic text-sand-ink">
               Descrição provisória — a substituir pelo texto oficial do escritório.
             </p>
           </Reveal>
@@ -77,7 +77,7 @@ export default function ProjectPage() {
 
         <div className="mt-14 flex items-baseline justify-between gap-6">
           <h2 className="font-display text-[clamp(1.8rem,3.4vw,2.8rem)]">Galeria</h2>
-          <p className="label text-sand">
+          <p className="label text-sand-ink">
             {String(project.gallery.length).padStart(2, '0')} imagens — clique para ampliar
           </p>
         </div>
@@ -106,7 +106,7 @@ export default function ProjectPage() {
           ))}
         </div>
 
-        <p className="mt-16 border-t border-graphite/15 pt-6 text-xs italic leading-relaxed text-sand">
+        <p className="mt-16 border-t border-graphite/15 pt-6 text-xs italic leading-relaxed text-sand-ink">
           {provisionalNotice}
         </p>
       </section>
@@ -116,7 +116,7 @@ export default function ProjectPage() {
           to={`/projeto/${prev.slug}`}
           className="group py-10 transition-colors duration-500 md:pr-8"
         >
-          <p className="label text-sand">Projeto anterior</p>
+          <p className="label text-sand-ink">Projeto anterior</p>
           <p className="mt-3 font-display text-[1.9rem] leading-none transition-colors duration-500 group-hover:text-brown">
             {prev.title}
           </p>
@@ -125,7 +125,7 @@ export default function ProjectPage() {
           to={`/projeto/${next.slug}`}
           className="group border-t border-graphite/15 py-10 text-left md:border-l md:border-t-0 md:pl-8 md:text-right"
         >
-          <p className="label text-sand">Próximo projeto</p>
+          <p className="label text-sand-ink">Próximo projeto</p>
           <p className="mt-3 font-display text-[1.9rem] leading-none transition-colors duration-500 group-hover:text-brown">
             {next.title}
           </p>

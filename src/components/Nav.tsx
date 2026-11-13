@@ -49,10 +49,11 @@ export default function Nav() {
         style={{ transitionTimingFunction: 'cubic-bezier(0.22, 1, 0.36, 1)' }}
       >
         <div className="mx-auto flex h-[68px] max-w-[1500px] items-center justify-between px-6 md:h-[88px] md:px-10 lg:px-16">
-          <Link to="/" className="group flex flex-col leading-none" aria-label="Marcello Moreira — início">
+          <Link to="/" className="group flex flex-col leading-none" aria-label="MARCELLO MOREIRA ARQUITETURA — início">
             <span className="font-display text-[15px] uppercase tracking-[0.22em] md:text-[17px]">
               Marcello Moreira
             </span>
+            {' '}
             <span className="label mt-1.5 opacity-70 transition-opacity group-hover:opacity-100">
               Arquitetura
             </span>
@@ -151,7 +152,7 @@ export default function Nav() {
                 >
                   Instagram ↗
                 </a>
-                <p className="label text-sand/80">{contact.address.value}</p>
+                <p className="label text-sand">{contact.address.value}</p>
               </motion.div>
             </div>
           </motion.div>

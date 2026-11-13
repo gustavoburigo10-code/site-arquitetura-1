@@ -51,7 +51,7 @@ export default function Process() {
               key={step.index}
               className="grid grid-cols-1 gap-3 border-b border-cream/15 py-8 md:grid-cols-12 md:gap-8 md:py-10"
             >
-              <span className="label text-sand md:col-span-1">{step.index}</span>
+              <span className="label text-sand-ink md:col-span-1">{step.index}</span>
               <h3 className="font-display text-[1.7rem] leading-none md:col-span-4 md:text-[2rem]">
                 {step.title}
               </h3>

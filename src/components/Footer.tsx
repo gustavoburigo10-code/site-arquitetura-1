@@ -76,7 +76,7 @@ export default function Footer() {
           <div className="lg:col-span-2">
             <p className="label mb-6 text-sand">Escritório</p>
             <p className="text-sm leading-relaxed text-beige/85">{contact.address.value}</p>
-            <p className="mt-4 text-xs leading-relaxed text-sand/80">{provisionalNotice}</p>
+            <p className="mt-4 text-xs leading-relaxed text-sand">{provisionalNotice}</p>
           </div>
         </div>
 
